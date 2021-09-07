@@ -1,0 +1,8 @@
+CurrentMills=0
+main> 
+while CurrentMills<10 do
+	CurrentMills+=2
+end
+CurrentMills=0
+:Ss+=1
+goto main

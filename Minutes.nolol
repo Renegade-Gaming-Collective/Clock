@@ -1,0 +1,46 @@
+main> 
+// Hours Button Decrementor
+if :HM==1 then
+	if :Hs<=0 then
+		:Hs=24
+	else
+		:Hs-=1
+	end
+end
+// Hours Button Incrementor
+if :HP==1 then
+	if :Hs>23 then
+		:Hs=0
+	else
+		:Hs+=1
+	end
+end
+// Hours Button Decrementor
+if :MM==1 then
+	if :Ms<=0 then
+		:Ms=59
+	else
+		:Ms-=1
+	end
+end
+// Hours Button Incrementor
+if :MP==1 then
+	if :Ms>59 then
+		:Ms=0
+	else
+		:Ms+=1
+	end
+end
+// Minutes Incrementor
+if :Ss>59 then
+	:Ms+=1
+	:Ss=0
+end
+// Hours Incrementor
+if :Ms>59 then
+	:Hs+=1
+	:Ms=0
+end
+// Time Display
+:Time="\n"+:Hs+":"+:Ms+":"+:Ss
+goto main
